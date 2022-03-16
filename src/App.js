@@ -6,42 +6,47 @@ import Write from './pages/write/Write';
 import Settings from './pages/settings/settings';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import { Routes } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { BrowserRouter as Router,Link,Route } from "react-router-dom";
 
 function App() {
-  
+  const currentUser = true; 
   return (
     <Router>
       <Topbar />
-      <Routes>
+      <Switch>
+
         <Route exact path="/">
-         <Home />
+       <Home />
         </Route>
-     
+
+        <Route path="/posts">
+        <Home />
+        </Route>
+
         <Route path="/register">
-         <Register />
+        <Register />
         </Route>
 
         <Route path="/login">
-          <Login />
+        <Login /> 
+        </Route>
+
+        <Route path="/post/:id">
+        <Single />
         </Route>
 
         <Route path="/write">
-          <Write />
+        <Write />  
         </Route>
-        
+
         <Route path="/settings">
-           <Settings /> 
-        </Route>
-        <Route path="/post/:postId">
-           <Single /> 
+        <Settings />  
         </Route>
 
-
-      </Routes>
+      </Switch>
     </Router>
   );
 }
 
-export default App; 
+export default App;
