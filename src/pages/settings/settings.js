@@ -25,18 +25,7 @@ export default function Settings() {
               style={{ display: "none" }}
               className="settingsPPInput"
             />
-          </div>
-          <label>Username</label>
-          <input type="text" placeholder="your username" name="name" />
-          <label>Email</label>
-          <input type="email" placeholder="safak@gmail.com" name="email" />
-          <label>Password</label>
-          <input type="password" placeholder="Password" name="password" />
-          <button className="settingsSubmitButton" type="submit">
-            Update
-          </button>
-        </form>
-      </div>
+          
       <Sidebar />
     </div>
   );
